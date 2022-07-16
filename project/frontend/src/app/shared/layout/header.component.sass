@@ -1,0 +1,48 @@
+// Custom variables
+@import '../../../assets/sass/vars.sass';
+  
+
+.main-header
+  height: 65px
+  width: 100%
+  position: fixed
+  z-index: 100
+  background-color: transparent
+  .logo-text
+    font-size: 3.5em
+    position: fixed
+    top: 10px
+    left: 15px
+  .main-links
+    float: right
+    padding: 22px
+    width: 100%
+    text-align: center
+    position: relative
+    a
+      margin: 0 10px
+      color: #dedede
+      text-shadow: none
+      position: relative
+      font-size: 1.9em
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        overflow: hidden
+        max-width: 0
+        border-bottom: 2px solid #fff
+        color: #fff
+        content: attr(data-hover)
+        transition: max-width 0.5s
+      &:hover:before
+        max-width: 100%
+      &:active:before
+        color: $accent_color
+        border-bottom: 2px solid $accent_color
+        transition: 0.3s
+
+
+.dark-header
+  box-shadow: 0px -9px 60px 25px rgba(0,0,0,0.6)
+  background-color: #111
